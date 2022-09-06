@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Book</title>
+</head>
+<body>
+    <h1>New Book Page</h1>
+    <p><a href="/books">link</a> to the main reading list</p>
+    <!-- the "action" section and "method" secton are both important. both help link up to the server's route code.  -->
+    <form action="/books" method="POST">
+        <label for="titleInput">Title: </label>
+        <input type="text" name="title" id="titleInput"><br>
+        <label for="authorInput">Author: </label>
+        <input type="text" name="author" id="authorInput"><br>
+        <label for="completedCheckbox">completed? </label>
+        <input type="checkbox" name="completed" id="completedCheckbox"><br>
+        <input type="submit" value="Submit Book">
+    </form>
+</body>
+</html>

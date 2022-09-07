@@ -7,7 +7,10 @@
     <title><%= showBook.title %> </title>
 </head>
 <body>
-    <nav><button><a href="/books">Back to list</a></button></nav>
+    <nav>
+        <button><a href="/books">Back to list</a></button>
+        <button><a href="/books/new">Add a new book</a></button>
+    </nav>
     <h1><%= showBook.title %> </h1>
     <button><a href="/books/<%=showBook._id%>/edit">Edit this book</a></button>
     <p>

@@ -7,7 +7,10 @@
     <title>Edit Book</title>
 </head>
 <body>
-    <nav><button><a href="/books">Back to list</a></button></nav>
+    <nav>
+        <button><a href="/books">Back to list</a></button>
+        <button><a href="/books/new">Add a new book</a></button>
+    </nav>
     <h1>Edit <%=book.title%> </h1>
     <!-- form action sends the PUT request to the server -->
     <form action="/books/<%=book._id%>?_method=PUT" method="POST">

@@ -8,11 +8,17 @@
 </head>
 <body>
     <h1>My Reading List</h1>
-    <p><a href="/books/new">link</a> to create a new book</p>
+    <button><a href="/books/new">Add a new book!</a></button>
 
     <ul>
         <% books.forEach (book =>{ %> 
-            <li><a href="/books/<%=book._id;%>"><%= book.title; %> </a></li>
+            <li>
+                <form action="/books/<%=book._id%>?_method=DELETE" method="POST" style="display: inline; margin-left: 20px;">
+                    <input type="submit" value="Delete">
+                </form>
+                <button><a href="/books/<%=book._id%>/edit">Edit</a></button>
+                <a href="/books/<%=book._id;%>"><%= book.title; %> </a>
+            </li>
             <% }) %> 
     </ul>
 </body>

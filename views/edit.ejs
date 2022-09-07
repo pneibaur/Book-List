@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book</title>
+</head>
+<body>
+    <nav><button><a href="/books">Back to list</a></button></nav>
+    <h1>Edit <%=book.title%> </h1>
+    <!-- form action sends the PUT request to the server -->
+    <form action="/books/<%=book._id%>?_method=PUT" method="POST">
+        <label for="titleInp">Title:</label>
+        <input type="text" name="title" id="titleInp" value="<%=book.title%>"><br>
+        <label for="authInp">Author:</label>
+        <input type="text" name="author" id="authInp" value="<%=book.author%>"><br>
+        <label for="completedCheck">Completed?</label>
+        <input type="checkbox" name="completed" id="completedCheck" value=><br>
+        <br>
+        <input type="submit" value="Save Changes">
+        <button><a href="/books/<%=book._id%>">Cancel</a></button>
+    </form>
+</body>
+</html>

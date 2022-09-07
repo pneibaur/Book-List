@@ -7,8 +7,9 @@
     <title><%= showBook.title %> </title>
 </head>
 <body>
-    <nav><a href="/books">link</a> to the main reading list</nav>
+    <nav><button><a href="/books">Back to list</a></button></nav>
     <h1><%= showBook.title %> </h1>
+    <button><a href="/books/<%=showBook._id%>/edit">Edit this book</a></button>
     <p>
         Author: <%= showBook.author %>
     <br>
